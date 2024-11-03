@@ -1,0 +1,26 @@
+package ru.job4j.array;
+
+public class Turn {
+    public static int[] back(int[] array) {
+        int indexStop = 0;
+        if (array.length % 2 == 0) {
+            indexStop = array.length / 2;
+        } else {
+            indexStop = (array.length - 1) / 2;
+        }
+        for (int i = 0; i < indexStop; i++) {
+            int temp = array[i];
+            array[i] = array[array.length - 1 - i];
+            array[array.length - 1 - i] = temp;
+        }
+        return array;
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = new int[]{1, 2, 3, 4, 5, 6};
+        back(numbers);
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+    }
+}
