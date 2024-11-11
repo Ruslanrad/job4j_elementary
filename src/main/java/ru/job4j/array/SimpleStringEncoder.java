@@ -21,7 +21,6 @@ public class SimpleStringEncoder {
             }
         }
 
-
         result += symbol;
         if (counter > 1) {
             result += counter;
