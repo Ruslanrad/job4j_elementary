@@ -31,4 +31,13 @@ public class PointTest {
         double output = p1.distance(p2);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
+
+    @Test
+    void whenPoints234and920() {
+        Point p1 = new Point(2,3,4);
+        Point p2 = new Point(9,2,0);
+        double expected = 8.12;
+        double output = p1.distance3d(p2);
+        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+    }
 }
