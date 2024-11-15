@@ -16,7 +16,7 @@ public class Max {
         this.a = a;
         this.b = b;
         this.c = c;
-        return max(a, b) > c ? max(a, b) : c;
+        return max(max(a, b),c);
     }
 
     public int max(int a, int b, int c, int d) {
@@ -24,6 +24,6 @@ public class Max {
         this.b = b;
         this.c = c;
         this.d = d;
-        return max(a, b, c) > d ? max(a, b, c) : d;
+        return max(max(a, b, c),d);
     }
 }
